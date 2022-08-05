@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              screens : {
+
+              }
+            }
+          }
+        }
+    </script>
+    <title>DB MOVIES</title>
+</head>
+<body id="body" class="relative">
+    <div id="Header" class="text-2xl sm:text-3xl md:text-5xl italic tracking-widest text-teal-500 text-center pt-4">MOVIES INFORMATION</div>
+
+    <div class="mx-auto my-2 w-[70%]">
+    <input label="search" type="text" id="search" class=" p-2 rounded-md  focus:border-green-600 border-4 w-[60%] " placeholder="try 'Avengers' 'KKN' 'Harry Potter'">
+    <button for="search" id="buttonSearch" class="p-2 w-[35%] rounded-md bg-green-600 hover:bg-green-800 "> Search Movie!</button>
+    </div>
+
+    <div id="desc" class="border w-[70%] mx-auto">
+      <h3 class="text-center font-semibold text-teal-500 m-2">Website untuk mencari film</h3>
+      <p class="text-slate-700 m-2 ">Website ini dibuat untuk latihan author dalam menggunakan Ajax untuk request data json dengan konsep callback, Website ini akan menampilkan 10 data film berdasarkan pencarian. <br> API By : <a href="https://www.omdbapi.com/" target="_blank" class="text-teal-500">OMDB API</a>. <br> ide dari : <a href="https://www.youtube.com/watch?v=jRsSVw3Ibhw&t=1685s" target="_blank" class="text-teal-500">Web Programming Unpas</a>. <br> Dibuat Oleh: <a href="http://www.instagram.com/cursaaa" target="_blank" class="text-teal-500">Me!</a>. <br> Support : TailwindCSS & Jquery. <br> Semoga Betah >_<</p>
+    </div>
+
+    <div id="row" class="card-template w-[90%] mx-auto border-blue-800 flex flex-wrap justify-around"></div>
+
+    <div id="detail" class="w-[90%] rounded-md  opacity-0 transition duration-[450ms] fixed top-36 left-[5%] bg-slate-200 -z-50">
+        <h2 class=" p-2 m-2">Details Film</h2>
+        <div id="detailsInfo"></div>
+        <button id="close-details" class="bg-red-400 p-2 m-2 rounded-md w-1/2 text-center hover:bg-red-600">Close</button>
+    </div>
+
+<script
+src="https://code.jquery.com/jquery-3.6.0.js"
+integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
